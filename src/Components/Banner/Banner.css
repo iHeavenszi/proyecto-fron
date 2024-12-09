@@ -1,0 +1,56 @@
+.banner {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Coloca la imagen y el texto en extremos opuestos */
+  padding: 20px;
+  height: 500px;
+  width: 100vh;
+  min-width: 186.56vh;
+  background-color: #000000; /* Color de fondo opcional */
+}
+
+.banner-text {
+  flex: 1; /* Ocupa todo el espacio disponible si es necesario */
+  margin-right: 20px; /* Espaciado entre el texto y la imagen */
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 8px 8px 9px rgba(0, 0, 0, 0.3); /* Opcional: sombra para texto */
+}
+
+.banner-text p {
+  font-size: 1.5rem;
+  margin: 10px 0 0 0;
+  color: #ffffff;
+}
+
+.banner-image {
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
+}
+
+.banner-image img {
+  max-width: 400px; /* Ajusta el ancho máximo de la imagen */
+  height: auto;
+  border-radius: 10px; /* Bordes redondeados para la imagen */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para la imagen */
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column; /* Coloca la imagen y el texto en columnas en pantallas pequeñas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-text {
+    margin-right: 0;
+    margin-bottom: 20px; /* Espaciado entre el texto y la imagen */
+  }
+
+  .banner-image img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  }
+}

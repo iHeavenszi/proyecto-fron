@@ -1,0 +1,86 @@
+/* Navbar.css */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Efecto de desenfoque en el fondo */
+  padding: 10px 20px; /* Ajustar padding para más espacio */
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Alinea el logo y el menú */
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 15px;
+  text-align: left; /* Ajusta el logo a la izquierda */
+}
+
+.logo:hover {
+  color: tomato;
+  text-decoration: underline overline dotted white;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 18px;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #ffcc00; /* Color de transición al pasar el cursor */
+}
+
+/* Icono de menú para pantallas pequeñas */
+.menu-toggle {
+  display: none;
+  font-size: 30px; /* Aumenta el tamaño del icono */
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Muestra el botón de menú */
+  }
+
+  .navList {
+    display: none; /* Oculta el menú inicialmente */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Alinea el menú debajo de la barra de navegación */
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro para el menú */
+    padding: 20px;
+    gap: 15px;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease-out; /* Añade una transición suave */
+    transform: translateY(-20px); /* Comienza desde arriba */
+  }
+
+  .navList.active {
+    display: flex; /* Muestra el menú cuando está activo */
+    transform: translateY(0); /* Desliza el menú hacia abajo */
+  }
+}

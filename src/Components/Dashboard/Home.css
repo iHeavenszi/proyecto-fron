@@ -1,0 +1,90 @@
+/* Estilos generales */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .product-card {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Bordes redondeados para un efecto más moderno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar la tarjeta */
+    display: inline-block;
+    width: 30%; /* Ajuste de 3 tarjetas por fila */
+    box-sizing: border-box;
+    background-color: #000000fb;
+    transition: transform 0.3s ease; /* Transición suave al pasar el ratón */
+    overflow: hidden; /* Evita que el contenido se desborde */
+  }
+  
+  .product-card img {
+    width: 100%; /* Asegura que las imágenes sean responsivas */
+    height: 20vh  ; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05); /* Efecto de zoom cuando se pasa el ratón sobre la tarjeta */
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Tamaño de fuente de los botones */
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo responsivo */
+  @media (max-width: 1024px) {
+    /* Dispositivos medianos (tabletas) */
+    .product-card {
+      width: calc(50% - 40px); /* Dos tarjetas por fila en pantallas medianas */
+      margin: 20px 10px;
+    }
+  
+    button {
+      padding: 8px 16px; /* Botones más pequeños en dispositivos medianos */
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Dispositivos más pequeños (tabletas y pantallas grandes de teléfonos) */
+    .product-card {
+      width: calc(50% - 20px); /* Dos tarjetas por fila */
+      padding: 15px; /* Reducir padding para que todo quede más ajustado */
+      margin: 15px 10px; /* Márgenes pequeños */
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 1rem; /* Asegurar que el texto del botón sea legible */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Dispositivos pequeños (teléfonos móviles) */
+    .product-card {
+      width: calc(100% - 40px); /* Una tarjeta por fila */
+      padding: 10px; /* Reducir aún más el padding */
+      margin: 15px 0; /* Márgenes más pequeños */
+    }
+  
+    button {
+      width: 100%; /* Los botones deben tomar todo el ancho disponible */
+      padding: 12px 16px;
+      font-size: 1rem; /* Asegurar que el texto sea adecuado */
+    }
+  }
+  

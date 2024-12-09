@@ -1,0 +1,52 @@
+/* Receipt.css */
+.receipt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    height: 100vh; /* Altura completa de la ventana */
+    width: 100vw; /* Ancho completo de la ventana */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../assets/fondog.jpg); /* Ruta correcta de la imagen */
+    background-repeat: no-repeat;
+    background-size: cover; /* Cubrir toda el área visible */
+    background-position: center; /* Centrar la imagen */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+  }
+  
+  .download-btn {
+    width: 100%; /* El botón ocupa el 100% del contenedor */
+    max-width: 300px; /* Máximo tamaño del botón */
+    padding: 15px 20px; /* Padding para que el botón sea más grande */
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 20px; /* Espaciado superior */
+  }
+  
+  .download-btn:hover {
+    background-color: #45a049; /* Cambio de color al pasar el ratón */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .download-btn {
+      width: 80%; /* El botón ocupa el 80% en pantallas medianas */
+      max-width: 250px; /* Máximo tamaño en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .download-btn {
+      width: 90%; /* El botón ocupa el 90% en pantallas pequeñas */
+      max-width: 200px; /* Máximo tamaño en pantallas pequeñas */
+    }
+  }
+  

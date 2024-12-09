@@ -1,0 +1,62 @@
+/* Estilo por defecto */
+.form-sections {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-details {
+  background-color: #f9f9f967;
+}
+
+.shipping-details {
+  background-color: #ffffff60;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Responsivo: Dispositivos pequeños */
+@media (max-width: 768px) {
+  .form-sections {
+    flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
+    gap: 15px;
+  }
+
+  .form-section {
+    min-width: 100%; /* Hacer que cada sección ocupe el 100% del ancho */
+    padding: 15px; /* Reducir el padding */
+  }
+
+  .form-actions {
+    flex-direction: column; /* Alinear los botones de forma vertical */
+    gap: 10px;
+  }
+}
+
+/* Responsivo: Dispositivos muy pequeños (teléfonos móviles) */
+@media (max-width: 480px) {
+  .form-sections {
+    gap: 20px; /* Aumentar el espacio entre las secciones */
+  }
+
+  .form-section {
+    padding: 10px; /* Reducir el padding */
+  }
+
+  .form-actions {
+    gap: 8px; /* Espacio reducido entre los botones */
+  }
+}

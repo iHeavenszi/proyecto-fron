@@ -1,0 +1,221 @@
+/* Estilos generales */
+.cart-container {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  }
+  
+  .cart-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .cart-details {
+    flex-grow: 1;
+    padding-left: 10px;
+    text-align: left;
+  }
+  
+  .cart-details h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+  
+  .cart-details p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .cart-details button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-details button:hover {
+    background-color: #ff0000;
+  }
+  
+  .quantity-container {
+    margin-top: 10px;
+    color: black;
+  }
+  
+  .cart-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .clear-btn,
+  .checkout-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .clear-btn {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  .clear-btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .checkout-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsivo: Dispositivos medianos (tablets) */
+  @media (max-width: 768px) {
+    .cart-card {
+      flex-direction: column; /* Apilar los elementos en dispositivos medianos */
+      align-items: center;
+      padding: 12px; /* Reducir el padding */
+    }
+  
+    .cart-image {
+      width: 70px; /* Aumentar el tamaño de la imagen */
+      height: 70px;
+      margin-bottom: 10px; /* Espacio entre la imagen y los detalles */
+    }
+  
+    .cart-details {
+      text-align: center; /* Centrar el texto en dispositivos más pequeños */
+      padding-left: 0; /* Evitar desplazamientos */
+    }
+  
+    .cart-details h3 {
+      font-size: 1rem; /* Ajustar tamaño del texto */
+    }
+  
+    .cart-details p {
+      font-size: 0.9rem; /* Ajustar tamaño del texto */
+    }
+  
+    .cart-actions {
+      flex-direction: column; /* Apilar las acciones */
+      text-align: center;
+    }
+  
+    .clear-btn, .checkout-btn {
+      margin: 5px;
+      padding: 8px 12px;
+      width: 100%; /* Botones al 100% de ancho */
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+  }
+  
+  /* Responsivo: Dispositivos pequeños (teléfonos móviles) */
+  @media (max-width: 480px) {
+    .cart-container {
+      padding: 10px;
+    }
+  
+    .cart-card {
+      padding: 8px;
+      flex-direction: column; /* Apilar los elementos */
+      align-items: center;
+    }
+  
+    .cart-image {
+      width: 60px; /* Aumentar el tamaño de la imagen */
+      height: 60px;
+      margin-bottom: 15px; /* Espacio entre la imagen y los detalles */
+    }
+  
+    .cart-details h3 {
+      font-size: 1rem; /* Ajustar el tamaño del texto */
+    }
+  
+    .cart-details p {
+      font-size: 0.8rem; /* Reducir el tamaño del texto */
+    }
+  
+    .cart-details button {
+      padding: 5px 8px;
+      font-size: 0.9rem;
+    }
+  
+    .clear-btn, .checkout-btn {
+      padding: 8px 12px;
+      width: 100%; /* Botones al 100% de ancho */
+      margin-top: 10px;
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+  }
+  
+  /* Responsivo: Dispositivos extra pequeños (pantallas más pequeñas que los móviles estándar) */
+  @media (max-width: 320px) {
+    .cart-container {
+      padding: 5px;
+    }
+  
+    .cart-card {
+      padding: 6px;
+      flex-direction: column; /* Apilar los elementos */
+      align-items: center;
+    }
+  
+    .cart-image {
+      width: 50px; /* Reducir tamaño de la imagen */
+      height: 50px;
+      margin-bottom: 12px; /* Espacio entre la imagen y los detalles */
+    }
+  
+    .cart-details h3 {
+      font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    }
+  
+    .cart-details p {
+      font-size: 0.7rem; /* Reducir el tamaño de la fuente */
+    }
+  
+    .cart-details button {
+      padding: 4px 6px;
+      font-size: 0.8rem;
+    }
+  
+    .clear-btn, .checkout-btn {
+      padding: 6px 10px;
+      width: 100%;
+      font-size: 0.8rem;
+    }
+  }
+  
