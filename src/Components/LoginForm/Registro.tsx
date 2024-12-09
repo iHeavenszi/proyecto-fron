@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './LoginForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 import { useAuth } from "../Auth/AuthProvider.tsx";
 import { Navigate, useNavigate } from "react-router-dom";
 import { AuthResponseError } from "../types/types.ts";
@@ -12,6 +13,7 @@ const Registro = () => {
     const [name, setName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
     const [errorResponse, setErrorResponse] = useState("");
 
     const auth = useAuth();
@@ -24,7 +26,7 @@ const Registro = () => {
         e.preventDefault();
 
         try{
-            const response = await fetch("https://server-3dlw.onrender.com/signup", {
+            const response = await fetch("https://server-3dlw.onrender.com/api/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -33,6 +35,7 @@ const Registro = () => {
                     name,
                     username,
                     password,
+                    email
                 }),
             });
 
@@ -64,6 +67,10 @@ const Registro = () => {
                 <div className="input-box">
                     <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder="Ingresa un usuario nuevo" required/>
                     <FaUser className="icon"/>
+                </div>
+                <div className="input-box">
+                    <input type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Ingresa tu correo" required/>
+                    <IoMail className="icon" />
                 </div>
                 <div className="input-box">
                     <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Ingresa contraseña" required/>

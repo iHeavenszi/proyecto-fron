@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "homepage": "http://darkysfishshop.com.mx/",
   "dependencies": {
     "jspdf": "^2.5.2",
     "react": "^18.3.1",
